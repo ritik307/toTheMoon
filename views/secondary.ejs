@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>toTheMoon</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/0f0e4b2731.js"></script>
+        
+        <style>
+            .display-4{
+                font-family: 'Permanent Marker', cursive;
+                color: rgb(205, 225, 236);
+                text-align: center;
+                margin-top: 10%;
+                text-shadow: 0px 4px 3px rgba(2, 92, 236, 0.4),
+                            0px 8px 13px rgba(2, 92, 236, 0.1),
+                            0px 18px 23px rgba(2, 92, 236, 0.1);
+            }
+            
+            .jumbotron{
+                height: 100vh;
+                background:url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80");
+                background-size: cover;
+                background-position: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid ">
+            <h1 class="display-4 ">Thankyou</h1>
+            <hr class="my-4">
+            <div class="input-group mb-3 container">
+                <input type="text" id="myInput" class="form-control" value= <%= ans %>  readonly>
+                <div class="input-group-append">
+                  <button id="mybutton" onclick="myFunction()"  id="mybutton" class="btn btn-success" type="button">Copy!</button>
+                </div>
+              </div>
+          </div>
+    </body>
+
+
+    <script>
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("myInput");
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+        } 
+    </script>
+
+</html>

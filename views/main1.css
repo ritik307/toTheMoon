@@ -1,0 +1,44 @@
+.jumbotron{
+    height: 100vh;
+    background:url("https://images.unsplash.com/photo-1510924512749-1c6a8f6f2dd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+	background-position: center;
+}
+.jumbotronText{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0px 4px 3px rgba(2, 92, 236, 0.4),
+				 0px 8px 13px rgba(2, 92, 236, 0.1),
+				 0px 18px 23px rgba(2, 92, 236, 0.1);
+}
+.hr{
+	width: 100%;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+
+.blurb h2{
+    color: #EA1C2C;
+    font-weight: 100;
+    font-size: 2.5em;
+}
+.blurb p{
+    color: #f498b8;
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+.moon-icon{
+    height: 15%;
+    width: 15%;
+}
+.moon{
+    height: 3%;
+    width: 3%;
+}

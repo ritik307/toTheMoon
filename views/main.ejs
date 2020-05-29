@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>toTheMoon</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main1.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <style>
+			#mainnavbar{
+				font-size: 1.5rem;
+				font-weight: 100;
+			}
+			#mainnavbar .nav-link{
+				color:white;
+			}
+			
+			#mainnavbar .navbar-brand{
+				font-size: 1.5rem;
+				font-weight: 100;
+				color: #EA1C2C;
+			}
+			.navbar.scrolled{
+    			background: rgba(198, 203, 206, 0.8);
+    			transition: background 500ms;
+			}
+			
+			@media(max-width: 1300px){
+				#galary h1{
+					font-weight: 100;
+					font-size: 2.5rem;
+				}
+}
+			.jumbotron{
+				height: 100vh;
+				background:url("https://images.unsplash.com/photo-1510924512749-1c6a8f6f2dd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+				background-size: cover;
+				background-position: center;
+			}
+			.jumbotronText{
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: white;
+				text-shadow: 0px 4px 3px rgba(2, 92, 236, 0.4),
+							 0px 8px 13px rgba(2, 92, 236, 0.1),
+							 0px 18px 23px rgba(2, 92, 236, 0.1);
+			}
+			.hr{
+				width: 100%;
+				border-top: 1px solid #f8f8f8;
+				border-bottom: 1px solid rgba(0,0,0,0.2);
+			}
+
+			
+
+			.blurb h2{
+				color: #EA1C2C;
+				font-weight: 100;
+				font-size: 2.5em;
+				color:#FF286A;
+			}
+			.blurb p{
+				color: #f498b8;
+				font-weight: 100;
+				font-size: 1.125rem;
+				line-height: 2;
+			}
+			.names{
+				color:pink;
+			}
+			.content{
+				font-family: 'Fredoka One', cursive;
+				
+			}
+			.inp{
+				margin:20%;
+			}
+			body{
+				background: url("https://cdn.discordapp.com/attachments/663253464620466226/672478149790924842/MoonSur.png");
+			}
+			input.transparent-input{
+			   background-color:rgba(198, 203, 206, 0.4);
+			}
+			.btn{
+				background-color:rgba(198, 203, 206, 0.4);
+			}
+			::-moz-placeholder { 
+			  color: white;
+			  opacity: 1; 
+			}
+		</style>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav id="mainnavbar" class="navbar navbar-expand-md navbar-dark pt-0 fixed-top ">
+			<a href="#" class="navbar-brand text-danger"><img src="https://cdn.discordapp.com/attachments/663253464620466226/672477848778309672/ToTheMoon.png" width="100" height="50" alt=""></a>
+        </nav>
+        <!-- NAVBAR END -->
+
+        <!-- JUMBOTRON -->
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="jumbotronText">
+                <h1 class="display-4">Make it shoot!!</h1>
+                <hr class="my-4 hr">  
+                <p class="lead">
+                    <!-- <div class="input-group mb-3">
+                        <form action="/addLink" method="POST">
+                            <input type="text" name="mylink" class="form-control" placeholder="Your Link Here " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-outline-primary" type="button">Shoot</button>
+                        </form>
+                        </div>
+                    	</div> -->
+					<div class="input-group mb-3" style="align:center">
+						<form action="/addLink" method="POST">
+							<input type="test" class="form-control transparent-input inp" name="myLink" placeholder="Your Link here">
+							<!-- <p>
+								Enter keyword of your choice:
+							</p> -->
+							<% if(sameFlag==1){ %>
+								<p stlye="color:red;">
+									Keyword already taken	
+								</p>
+							<% } %>
+							<input type="test" class="form-control transparent-input keyword inp" name="keyword" placeholder="Your keyword here :) ">
+							<button class="btn btn-secondary" style="margin: 5vh">
+								submit!!
+							</button>
+						</form>
+					</div>
+                </p>  
+        	</div>
+		</div>
+            <!-- Info bar -->
+        
+        <section class="container-fluid blurb">
+            <div class="row align-items-center">
+                <div class="col-md-6 px-0 order-1 order-md-0">
+                    <img class="img-fluid " src="https://d3n32ilufxuvd1.cloudfront.net/5783ba38731a8e6d00366668/1019028/upload-7aee2af0-32d2-11e8-bf6d-59f70a71d1fc.gif" alt="">
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 order-0 order-md-1">
+                            <h2  class="content">Inspire Trust</h2>
+                            <img class="moon-icon img-fluid" src="https://img.icons8.com/officel/40/000000/moon.png" class="d-none d-lg-inline">
+                            <p >As your click numbers go up, your brand recognition increases. And the more that grows, the more confident people become in the integrity of your content and communications.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid blurb">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <h2  class="content">Promote Sharing</h2>
+                            <img class="moon-icon img-fluid" src="https://img.icons8.com/officel/40/000000/moon.png" class="d-none d-lg-inline">
+                            <p >You can simply fit more links and content in less space with URL shorteners. A tweet can describe and then link to a webpage in under 140 characters, while a full URL might not even come with an explanation.</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-md-6 px-0">
+                        <img class="img-fluid" src="https://images.squarespace-cdn.com/content/v1/54cc8060e4b02ab7cb239ae7/1558108173300-760X58VY8NUAQKOSPQQZ/ke17ZwdGBToddI8pDm48kAXOUrMkXBZcqSP1Mcjd__Z7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmIZGN_KQZMRQ8ZYXbcezg97fBe4a3QYsafIqmcgMG7NBbE0l70-e1SEh_P9-mzv6_/Joy.gif" alt="">
+                </div>
+                </div>
+        </section>
+
+        <section class="container-fluid blurb">
+            <div class="row align-items-center">
+                <div class="col-md-6 px-0 order-1 order-md-0">
+                    <img class="img-fluid" src="https://cdn.discordapp.com/attachments/663253464620466226/672486110735368203/astro1.gif" alt="">
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 order-0 order-md-1">
+                            <h2  class="content">Managable Link</h2>
+                            <img class="moon-icon img-fluid" src="https://img.icons8.com/officel/40/000000/moon.png" class="d-none d-lg-inline">
+                            <p>Many links are long and wordy for SEO reasons. SEO, or search engine optimization, is about ranking higher in Google, and one of the factors Google and other search engines consider are keywords in the URL. This creates a conundrum for the user - the URLs help describe the content, but are lengthy and are not easy to share on emails, web pages, and especially social media services like Facebook and Twitter.</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section> 
+	
+		<!-- Footer -->
+		<footer class="page-footer font-small bg-secondary">
+
+		  <!-- Copyright -->
+		  <div class="footer-copyright text-center py-3">Made with 
+			  <img src="https://img.icons8.com/dusk/30/000000/like.png"> by
+			<a class="names" href="https://www.linkedin.com/in/ritik-rawal-698a18142/"> Ritik Rawal</a> and
+			<a class="names" href="https://www.linkedin.com/in/ritik-rawal-698a18142/"> Mohd. Azam Noor</a> 
+		  </div>
+		  <!-- Copyright -->
+
+		</footer>
+		<!-- Footer -->
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<script>
+            $(function (){
+                $(document).scroll(function(){
+                    var $nav = $("#mainnavbar");
+                    $nav.toggleClass("scrolled",$(this).scrollTop() > $nav.height());
+                });
+            });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
